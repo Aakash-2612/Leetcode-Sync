@@ -19,7 +19,7 @@ class Solution:
         
         ind = 0
         ans.sort()
-        print(ans)
+        # print(ans)
         for i in s:
             if i == '?':
                 res += ans[ind]
