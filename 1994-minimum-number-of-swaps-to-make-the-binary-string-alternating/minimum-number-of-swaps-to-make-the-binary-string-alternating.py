@@ -4,7 +4,6 @@ class Solution:
         d2 = {'0': 0, '1': 0}
         temp = 1
         for i in s:
-            print(i, int(temp))
             if int(i) != int(temp):
                 d1[i] += 1
             else:
