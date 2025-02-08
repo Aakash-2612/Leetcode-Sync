@@ -5,7 +5,6 @@ class Solution:
         num = str(num)
         for r in range(len(num)):
             if (r - l + 1)% k == 0:
-                print(int(num[l:r+1]))
                 try:
                     if int(num) % int(num[l:r+1]) == 0:
                         ans += 1
