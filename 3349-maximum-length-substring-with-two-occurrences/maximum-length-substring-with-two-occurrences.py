@@ -7,7 +7,6 @@ class Solution:
                 arr[ord(s[j]) - ord("a")] += 1
                 if max(arr) > 2:
                     ans = max(ans, (j - i))
-                    print(j, i)
                     break
                 ans = max(ans, (j - i + 1))
         return ans
