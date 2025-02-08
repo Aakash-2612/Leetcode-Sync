@@ -1,13 +1,12 @@
 class Solution:
     def maximumLengthSubstring(self, s: str) -> int:
+        l = 0
         ans = 0
-        for i in range(len(s)):
-            arr = [0 for a in range(26)]
-            for j in range(i, len(s)):
-                arr[ord(s[j]) - ord("a")] += 1
-                if max(arr) > 2:
-                    ans = max(ans, (j - i))
-                    break
-                ans = max(ans, (j - i + 1))
-
+        arr = [0 for i in range(26)]
+        for r in range(len(s)):
+            arr[ord(s[r]) - ord("a")] += 1
+            while max(arr) > 2:
+                arr[ord(s[l]) - ord("a")] -= 1
+                l += 1
+            ans = max(ans, (r - l + 1))
         return ans
