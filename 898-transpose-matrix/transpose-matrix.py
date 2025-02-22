@@ -3,7 +3,7 @@ class Solution:
         ans = []
         rows = len(matrix)
         cols = len(matrix[0])
-        print(rows, cols)
+        # print(rows, cols)
         for i in range(cols):
             temp = []
             for j in range(rows):
