@@ -7,16 +7,11 @@
 
 class Solution:
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
-        self.ans = None
         def travel(original, cloned):
             if not original and not cloned:
                 return None
             if original == target:
-                self.ans = cloned
-                return
+                return cloned
             
-            travel(original.left, cloned.left)
-            travel(original.right, cloned.right)
-
-        travel(original, cloned)
-        return self.ans
+            return travel(original.left, cloned.left) or travel(original.right, cloned.right)
+        return travel(original, cloned)
