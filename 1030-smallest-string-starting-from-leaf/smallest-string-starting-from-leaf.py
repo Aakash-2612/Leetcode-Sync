@@ -23,7 +23,7 @@ class Solution:
             preorder(root.right, temp)
             temp.pop()
         preorder(root, temp)
-        print(ans)
+        # print(ans)
         return min(ans)
         
         
