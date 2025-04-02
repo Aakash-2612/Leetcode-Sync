@@ -5,6 +5,5 @@ class Solution:
             for j in range(i+1, len(nums)):
                 for k in range(j+1, len(nums)):
                     if i < j < k:
-                        print((nums[i] - nums[j]) * nums[k])
                         ans = max(ans, (nums[i] - nums[j]) * nums[k])
         return ans
