@@ -1,7 +1,7 @@
 class Solution:
     def bestClosingTime(self, customers: str) -> int:
         penalty = customers.count('Y')
-        print(penalty)
+        # print(penalty)
         ans = -1
         min_ans = float("inf")
         if penalty < min_ans:
