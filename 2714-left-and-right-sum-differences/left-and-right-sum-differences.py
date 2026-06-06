@@ -11,8 +11,8 @@ class Solution:
             s += i
             r.append(s)
         r = r[::-1]
-        print(l)
-        print(r)
+        # print(l)
+        # print(r)
         ans = []
         for i, j in zip(l, r):
             ans.append(abs(i - j))
