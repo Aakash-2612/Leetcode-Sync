@@ -2,9 +2,9 @@ class Solution:
     def angleClock(self, hour: int, minutes: int) -> float:
         ans = 0
         extra = (minutes/5)*(2.5)
-        print(extra)
+        # print(extra)
         t = (minutes/5)
-        print(t)
+        # print(t)
         if t == 0:
             t = 12
         if t < hour:
